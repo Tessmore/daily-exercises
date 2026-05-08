@@ -5,10 +5,10 @@
 
 	let { exercise, date }: { exercise: Exercise; date: string } = $props();
 
-	let completed = $derived(($completedExercises[date] ?? []).includes(exercise.name));
+	let completed = $derived(($completedExercises[date] ?? []).includes(exercise.id));
 
 	function complete() {
-		if (!completed) markCompleted(date, exercise.name);
+		if (!completed) markCompleted(date, exercise.id);
 	}
 
 	function onKey(e: KeyboardEvent) {

@@ -8,9 +8,9 @@ type CompletedByDate = Record<string, string[]>;
 
 function isValidShape(value: unknown): value is CompletedByDate {
 	if (!value || typeof value !== 'object' || Array.isArray(value)) return false;
-	for (const [key, names] of Object.entries(value)) {
+	for (const [key, ids] of Object.entries(value)) {
 		if (!/^\d{4}-\d{2}-\d{2}$/.test(key)) return false;
-		if (!Array.isArray(names) || !names.every((n) => typeof n === 'string')) return false;
+		if (!Array.isArray(ids) || !ids.every((n) => typeof n === 'string')) return false;
 	}
 	return true;
 }
@@ -51,10 +51,10 @@ if (browser) {
 
 export const completedExercises = { subscribe: store.subscribe };
 
-export function markCompleted(date: string, name: string): void {
+export function markCompleted(date: string, id: string): void {
 	store.update((current) => {
 		const forDay = current[date] ?? [];
-		if (forDay.includes(name)) return current;
-		return { ...current, [date]: [...forDay, name] };
+		if (forDay.includes(id)) return current;
+		return { ...current, [date]: [...forDay, id] };
 	});
 }

@@ -7,10 +7,15 @@ import { DailyExerciseSelector } from './DailyExerciseSelector';
 export async function getDailyExercises(filter: ExerciseFilter): Promise<Exercise[]> {
 	const repo = new JsonExerciseRepository();
 	const selector = new DailyExerciseSelector(new SystemClock());
-	const pool = (await repo.getAll()).filter((e) => filter.matches(e));
+	const [allExercises, allRequired] = await Promise.all([repo.getAll(), repo.getRequired()]);
+	const pool = allExercises.filter((e) => filter.matches(e));
+	const required = allRequired.filter((e) => filter.matches(e));
 	const distribution = filter.distribution();
-	if (!hasEnoughCandidates(pool, distribution)) return [];
-	return selector.select(pool, distribution, filter.toSearchParams().toString());
+	const salt = filter.toSearchParams().toString();
+	const selected = hasEnoughCandidates(pool, distribution)
+		? selector.select(pool, distribution, salt)
+		: [];
+	return selector.arrange([...required, ...selected], salt);
 }
 
 function hasEnoughCandidates(

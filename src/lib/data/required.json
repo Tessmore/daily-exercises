@@ -1,0 +1,34 @@
+[
+  {
+    "id": "dumbbells-morning-1",
+    "name": "dumbbells",
+    "description": "Dumbbell curls or presses.",
+    "number": 10,
+    "difficulty": "light",
+    "body": ["arms"]
+  },
+  {
+    "id": "dumbbells-morning-2",
+    "name": "dumbbells",
+    "description": "Dumbbell curls or presses.",
+    "number": 10,
+    "difficulty": "light",
+    "body": ["arms"]
+  },
+  {
+    "id": "dumbbells-2",
+    "name": "dumbbells",
+    "description": "Dumbbell curls or presses.",
+    "number": 20,
+    "difficulty": "medium",
+    "body": ["arms"]
+  },
+  {
+    "id": "dumbbells-3",
+    "name": "dumbbells",
+    "description": "Dumbbell curls or presses — pick a comfortable weight",
+    "number": 30,
+    "difficulty": "tough",
+    "body": ["arms"]
+  }
+]

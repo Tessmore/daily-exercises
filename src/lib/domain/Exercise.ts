@@ -2,6 +2,7 @@ import { isDifficulty, type Difficulty } from './Difficulty';
 import { isBodyPart, type BodyPart } from './BodyPart';
 
 export interface ExerciseData {
+	id: string;
 	name: string;
 	description: string;
 	number: number;
@@ -11,6 +12,7 @@ export interface ExerciseData {
 
 export class Exercise {
 	constructor(
+		public readonly id: string,
 		public readonly name: string,
 		public readonly description: string,
 		public readonly number: number,
@@ -23,6 +25,8 @@ export class Exercise {
 			throw new Error(`Exercise.fromJSON: expected object, got ${typeof raw}`);
 		}
 		const r = raw as Record<string, unknown>;
+		if (typeof r.id !== 'string' || r.id.length === 0)
+			throw new Error('Exercise.fromJSON: "id" must be a non-empty string');
 		if (typeof r.name !== 'string') throw new Error('Exercise.fromJSON: "name" must be string');
 		if (typeof r.description !== 'string')
 			throw new Error('Exercise.fromJSON: "description" must be string');
@@ -32,7 +36,7 @@ export class Exercise {
 			throw new Error(`Exercise.fromJSON: invalid difficulty "${String(r.difficulty)}"`);
 		if (!Array.isArray(r.body) || !r.body.every(isBodyPart))
 			throw new Error(`Exercise.fromJSON: "body" must be an array of BodyPart`);
-		return new Exercise(r.name, r.description, r.number, r.difficulty, r.body);
+		return new Exercise(r.id, r.name, r.description, r.number, r.difficulty, r.body);
 	}
 
 	format(): string {
@@ -41,6 +45,7 @@ export class Exercise {
 
 	toJSON(): ExerciseData {
 		return {
+			id: this.id,
 			name: this.name,
 			description: this.description,
 			number: this.number,

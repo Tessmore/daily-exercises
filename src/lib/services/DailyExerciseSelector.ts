@@ -24,6 +24,11 @@ export class DailyExerciseSelector implements ExerciseSelector {
 		}
 		return picked;
 	}
+
+	arrange(items: readonly Exercise[], salt: string): Exercise[] {
+		const rng = mulberry32(seedFromString(`${this.clock.today()}|${salt}|arrange`));
+		return shuffle(items, rng);
+	}
 }
 
 function orderedDifficulties(distribution: DifficultyDistribution): Difficulty[] {

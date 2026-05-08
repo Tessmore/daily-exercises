@@ -1,5 +1,6 @@
 [
   {
+    "id": "push-ups",
     "name": "push ups",
     "description": "Standard push ups. Keep your back flat and lower until your chest is just above the floor.",
     "number": 10,
@@ -7,6 +8,7 @@
     "body": ["arms", "core"]
   },
   {
+    "id": "knee-push-ups",
     "name": "knee push ups",
     "description": "Push ups from your knees. Keep a straight line from knees to shoulders, lower your chest with control.",
     "number": 12,
@@ -14,6 +16,7 @@
     "body": ["arms", "core"]
   },
   {
+    "id": "jumping-jacks",
     "name": "jumping jacks",
     "description": "Jump with legs spread and hands touching overhead, then return to a standing position.",
     "number": 20,
@@ -21,6 +24,7 @@
     "body": ["legs", "arms"]
   },
   {
+    "id": "high-knees",
     "name": "high knees",
     "description": "Run in place driving your knees up to hip height. Stay light on the balls of your feet.",
     "number": 30,
@@ -28,6 +32,7 @@
     "body": ["legs", "core"]
   },
   {
+    "id": "glute-bridges",
     "name": "glute bridges",
     "description": "Lie on your back with knees bent, feet flat. Lift your hips toward the ceiling and squeeze.",
     "number": 15,
@@ -35,6 +40,7 @@
     "body": ["legs", "core", "back"]
   },
   {
+    "id": "supermans",
     "name": "supermans",
     "description": "Lie face down, arms extended forward. Lift arms, chest, and legs off the floor and hold briefly.",
     "number": 12,
@@ -42,6 +48,7 @@
     "body": ["back", "core"]
   },
   {
+    "id": "bird-dog",
     "name": "bird dog",
     "description": "On hands and knees, extend opposite arm and leg until parallel to the floor. Alternate sides.",
     "number": 10,
@@ -49,6 +56,7 @@
     "body": ["back", "core"]
   },
   {
+    "id": "dead-bug",
     "name": "dead bug",
     "description": "Lie on your back with arms up and knees bent at 90. Lower opposite arm and leg without arching your back.",
     "number": 12,
@@ -56,6 +64,7 @@
     "body": ["core"]
   },
   {
+    "id": "bodyweight-squats",
     "name": "bodyweight squats",
     "description": "Feet shoulder-width apart, sit back into your heels, knees tracking over toes.",
     "number": 15,
@@ -63,6 +72,7 @@
     "body": ["legs", "core"]
   },
   {
+    "id": "lunges",
     "name": "lunges",
     "description": "Step forward with one leg until both knees are bent at a 90-degree angle. Alternate legs.",
     "number": 12,
@@ -70,6 +80,7 @@
     "body": ["legs", "core"]
   },
   {
+    "id": "reverse-lunges",
     "name": "reverse lunges",
     "description": "Step backward into a lunge, keeping the front knee over the ankle. Push through the front heel to return.",
     "number": 12,
@@ -77,6 +88,7 @@
     "body": ["legs", "core"]
   },
   {
+    "id": "wall-sit",
     "name": "wall sit",
     "description": "Back flat against a wall, slide down until thighs are parallel to the floor. Hold the position.",
     "number": 30,
@@ -84,6 +96,7 @@
     "body": ["legs"]
   },
   {
+    "id": "plank",
     "name": "plank",
     "description": "Hold a push-up position on your forearms. Keep your core tight and body in a straight line.",
     "number": 30,
@@ -91,6 +104,7 @@
     "body": ["core", "arms", "back"]
   },
   {
+    "id": "side-plank",
     "name": "side plank",
     "description": "Balance on one forearm and the side of one foot, hips lifted. Keep your body in a straight line.",
     "number": 20,
@@ -98,6 +112,7 @@
     "body": ["core", "arms"]
   },
   {
+    "id": "bicycle-crunches",
     "name": "bicycle crunches",
     "description": "Lie on your back, hands behind head. Bring opposite elbow to opposite knee in a pedalling motion.",
     "number": 20,
@@ -105,6 +120,7 @@
     "body": ["core"]
   },
   {
+    "id": "burpees",
     "name": "burpees",
     "description": "Squat, kick legs back, push up, jump them in, jump up. One fluid rep.",
     "number": 8,
@@ -112,6 +128,7 @@
     "body": ["arms", "legs", "core"]
   },
   {
+    "id": "mountain-climbers",
     "name": "mountain climbers",
     "description": "In a plank position, quickly alternate bringing your knees toward your chest as if running.",
     "number": 20,
@@ -119,6 +136,7 @@
     "body": ["core", "arms", "legs"]
   },
   {
+    "id": "jump-squats",
     "name": "jump squats",
     "description": "Drop into a squat then explode upward. Land softly with bent knees and go straight into the next rep.",
     "number": 12,
@@ -126,6 +144,7 @@
     "body": ["legs", "core"]
   },
   {
+    "id": "pike-push-ups",
     "name": "pike push ups",
     "description": "From a downward-dog position, bend your elbows to lower your head toward the floor, then press back up.",
     "number": 8,
@@ -133,6 +152,7 @@
     "body": ["arms", "core"]
   },
   {
+    "id": "tricep-dips",
     "name": "tricep dips",
     "description": "Hands on a chair edge behind you, legs extended. Bend your elbows to lower your hips, then press back up.",
     "number": 10,
@@ -140,6 +160,7 @@
     "body": ["arms"]
   },
   {
+    "id": "single-leg-glute-bridges",
     "name": "single-leg glute bridges",
     "description": "Glute bridge with one leg extended toward the ceiling. Drive through the planted heel and squeeze the glute.",
     "number": 10,

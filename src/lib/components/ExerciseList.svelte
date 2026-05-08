@@ -9,7 +9,7 @@
 	<p class="empty">No exercises match these filters. Try checking more boxes.</p>
 {:else}
 	<ul>
-		{#each exercises as exercise (exercise.name)}
+		{#each exercises as exercise (exercise.id)}
 			<li><ExerciseCard {exercise} {date} /></li>
 		{/each}
 	</ul>
