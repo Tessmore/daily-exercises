@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(yarn check *)",
+      "PowerShell(yarn run *)"
+    ]
+  }
+}
