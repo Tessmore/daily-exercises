@@ -1,13 +1,13 @@
 # Daily exercises
 
-A small SvelteKit app that picks a daily set of bodyweight exercises. The selection is deterministic per day — refreshing the page returns the same set, but a new day brings a new one.
+Picks a daily set of exercises. The selection is deterministic per day — refreshing the page returns the same set. Each day brings a new one.
 
-Live at: https://tessmore.github.io/daily-exercises/
+<img width="1837" height="1102" alt="image" src="https://github.com/user-attachments/assets/85404b85-aa4d-47ed-89b9-d2af298594d0" />
 
 ## How it works
 
 - Exercises live in `src/lib/data/exercises.json` and are tagged with a `difficulty` (`light` / `medium` / `tough`) and one or more `body` parts (`arms` / `legs` / `core` / `back`).
-- `DailyExerciseSelector` (`src/lib/services/DailyExerciseSelector.ts`) seeds a Mulberry32 PRNG from the current date plus the active filter, then greedily picks one exercise per selected difficulty, preferring candidates that cover body parts not yet covered that day.
+- `DailyExerciseSelector` (`src/lib/services/DailyExerciseSelector.ts`) seeds a Mulberry32 PRNG from the current date plus the active filter, then picks one exercise per selected difficulty, preferring candidates that cover body parts not yet covered that day.
 - `ExerciseFilter` (`src/lib/domain/ExerciseFilter.ts`) is mirrored into the URL via `?body=…&difficulty=…`, so any filter combination is shareable and bookmarkable.
 
 ## Project layout
@@ -35,7 +35,7 @@ src/
 ```sh
 yarn install
 yarn dev            # http://localhost:5173
-yarn check          # type-check via svelte-check (the only quality gate today)
+yarn check          # type-check via svelte-check
 ```
 
 ## Building
@@ -44,9 +44,3 @@ yarn check          # type-check via svelte-check (the only quality gate today)
 yarn build          # outputs to ./build
 yarn preview        # serves the production build locally
 ```
-
-## Deployment
-
-`.github/workflows/deploy.yml` builds on every push to `main` and publishes `./build` to GitHub Pages. The base path `/daily-exercises` is set in `svelte.config.js` for production builds; in dev the app runs at the root so `yarn dev` works unchanged.
-
-To deploy to a different repo or path, update `paths.base` in `svelte.config.js`.
