@@ -1,0 +1,58 @@
+[
+  {
+    "name": "push ups",
+    "description": "Standard push ups. Keep your back flat and lower until your chest is just above the floor.",
+    "number": 10,
+    "difficulty": "light",
+    "body": ["arms", "core"]
+  },
+  {
+    "name": "bodyweight squats",
+    "description": "Feet shoulder-width apart, sit back into your heels, knees tracking over toes.",
+    "number": 15,
+    "difficulty": "medium",
+    "body": ["legs", "core"]
+  },
+  {
+    "name": "burpees",
+    "description": "Squat, kick legs back, push up, jump them in, jump up. One fluid rep.",
+    "number": 8,
+    "difficulty": "tough",
+    "body": ["arms", "legs", "core"]
+  },
+  {
+    "name": "plank",
+    "description": "Hold a push-up position on your forearms. Keep your core tight and body in a straight line.",
+    "number": 30,
+    "difficulty": "medium",
+    "body": ["core", "arms", "back"]
+  },
+  {
+    "name": "lunges",
+    "description": "Step forward with one leg until both knees are bent at a 90-degree angle. Alternate legs.",
+    "number": 12,
+    "difficulty": "medium",
+    "body": ["legs", "core"]
+  },
+  {
+    "name": "jumping jacks",
+    "description": "Jump with legs spread and hands touching overhead, then return to a standing position.",
+    "number": 20,
+    "difficulty": "light",
+    "body": ["legs", "arms"]
+  },
+  {
+    "name": "mountain climbers",
+    "description": "In a plank position, quickly alternate bringing your knees toward your chest as if running.",
+    "number": 20,
+    "difficulty": "tough",
+    "body": ["core", "arms", "legs"]
+  },
+  {
+    "name": "glute bridges",
+    "description": "Lie on your back with knees bent, feet flat. Lift your hips toward the ceiling and squeeze.",
+    "number": 15,
+    "difficulty": "light",
+    "body": ["legs", "core", "back"]
+  }
+]
